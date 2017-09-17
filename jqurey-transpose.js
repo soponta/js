@@ -1,4 +1,3 @@
-
 (function($) {
 
   $.fn.transpose = function(options) {
