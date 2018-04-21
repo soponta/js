@@ -1,4 +1,4 @@
-var disqus_shortname="USERNAME DISQUS";
+var disqus_shortname="mp-e-loket";
 var disqus_url = disqus_blogger_current_url;
 
 (function () {
