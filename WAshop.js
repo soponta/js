@@ -541,7 +541,14 @@ function hapus2() {
     localStorage[_0x4efb[14]](_0x4efb[13], _0xa595x3)
 }
 
-
+var url_string = window[_0x4efb[16]][_0x4efb[15]],
+    urlParameter = new URL(url_string),
+    labelMode = urlParameter[_0x4efb[19]][_0x4efb[18]](_0x4efb[17]);
+_0x4efb[20] == labelMode && (document[_0x4efb[22]](_0x4efb[21]), window[_0x4efb[23]] = function () {
+    $(_0x4efb[28])[_0x4efb[27]](function () {
+        $(this)[_0x4efb[26]](_0x4efb[24], _0x4efb[25])
+    })
+});
 function getDocHeight(_0xa595x3) {
     _0xa595x3 = _0xa595x3 || document;
     var _0xa595x4 = _0xa595x3[_0x4efb[29]],
