@@ -541,7 +541,7 @@ function hapus2() {
     localStorage[_0x4efb[14]](_0x4efb[13], _0xa595x3)
 }
 
-var url_string = window[_0x4efb[16]][_0x4efb[15]],
+var url_string = window['location']['href'],
     urlParameter = new URL(url_string),
     labelMode = urlParameter[_0x4efb[19]][_0x4efb[18]](_0x4efb[17]);
 _0x4efb[20] == labelMode && (document[_0x4efb[22]](_0x4efb[21]), window[_0x4efb[23]] = function () {
@@ -557,11 +557,7 @@ function getDocHeight(_0xa595x3) {
     return _0xa595xc
 }
 
-function setIframeHeight(_0xa595x3) {
-    var _0xa595x4 = document[_0x4efb[6]](_0xa595x3),
-        _0xa595xb = _0xa595x4[_0x4efb[35]] ? _0xa595x4[_0x4efb[35]] : _0xa595x4[_0x4efb[37]][_0x4efb[36]];
-    _0xa595x4[_0x4efb[4]][_0x4efb[38]] = _0x4efb[39], _0xa595x4[_0x4efb[4]][_0x4efb[40]] = _0x4efb[41], _0xa595x4[_0x4efb[4]][_0x4efb[40]] = getDocHeight(_0xa595xb) + 4 + _0x4efb[42], _0xa595x4[_0x4efb[4]][_0x4efb[38]] = _0x4efb[43]
-}
+
 $(document)[_0x4efb[46]](function () {
     $(window)[_0x4efb[45]](function () {
         setIframeHeight(_0x4efb[44])
