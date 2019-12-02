@@ -559,11 +559,7 @@ function getDocHeight(_0xa595x3) {
     return _0xa595xc
 }
 
-function setIframeHeight(_0xa595x3) {
-    var _0xa595x4 = document.getElementById(_0xa595x3),
-        _0xa595xb = _0xa595x4.contentDocument ? _0xa595x4.contentDocument : _0xa595x4.contentWindow.document;
-    _0xa595x4.style.visibility = "hidden", _0xa595x4.style.height = "0px", _0xa595x4.style.height = getDocHeight(_0xa595xb) + 4 + ".42px", _0xa595x4.style.visibility = "visible"
-}
+
 $(document).ready(function () {
     $(window).resize(function () {
         setIframeHeight("relatedframe-posts")
