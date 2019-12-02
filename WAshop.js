@@ -521,51 +521,51 @@ function _0x4bf798() {
         }
     });
 } - 0x1 == navigator[_0xf82fbc[0xbd]][_0xf82fbc[0x74]](_0xf82fbc[0xbc]) && (window[_0xf82fbc[0x1e]] ? window[_0xf82fbc[0x1e]](_0xf82fbc[0x2a], _0x4bf798, !0x1) : window[_0xf82fbc[0x20]] ? window[_0xf82fbc[0x20]](_0xf82fbc[0xa5], _0x4bf798) : window[_0xf82fbc[0xa5]] = _0x4bf798);
-var _0x4efb = ["tabcontent", "getElementsByClassName", "length", "display", "style", "none", "getElementById", "block", "tabmenu", "className", "tabmenu active", "innerHTML", "checkout-box", "ck", "setItem", "href", "location", "mode", "get", "searchParams", "related-posts", "<style>#blog-pager,.navmobile,#header-material,#menu-blanter,.breadcrumbs,#popular-box,.footer-blanter,#footer-material,#footer-bottom,.navwa,.flashlight,.blanternotif,a.blantershow-chat{display:none!important}body:before{background:#fff}.post-outer{margin:0 3px 10px}#outer-material{margin:0}#content-material{padding:0 5px;width:auto!important;max-width:100%!important}*{overflow-y:hidden!important}body{padding-top:0!important;background:transparent!important;overflow-y:hidden!important}.post-thumbnail img{height:150px}</style>", "write", "onload", "target", "_top", "attr", "each", ".post.hentry a", "body", "documentElement", "scrollHeight", "offsetHeight", "clientHeight", "max", "contentDocument", "document", "contentWindow", "visibility", "hidden", "height", "0px", ".42px", "visible", "relatedframe-posts", "resize", "ready", "load", "bind", "#relatedframe-posts"];
 
 function rudrSwitchTab(_0xa595x2, _0xa595x3) {
-    var _0xa595x4, _0xa595x5 = document[_0x4efb[1]](_0x4efb[0]);
-    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5[_0x4efb[2]]; _0xa595x4++) {
-        _0xa595x5[_0xa595x4][_0x4efb[4]][_0x4efb[3]] = _0x4efb[5]
+    var _0xa595x4, _0xa595x5 = document.getElementsByClassName("tabcontent");
+    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5.length; _0xa595x4++) {
+        _0xa595x5[_0xa595x4].style.display = "none"
     };
-    document[_0x4efb[6]](_0xa595x3)[_0x4efb[4]][_0x4efb[3]] = _0x4efb[7];
-    var _0xa595x4, _0xa595x5 = document[_0x4efb[1]](_0x4efb[8]);
-    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5[_0x4efb[2]]; _0xa595x4++) {
-        _0xa595x5[_0xa595x4][_0x4efb[9]] = _0x4efb[8]
+    document.getElementById(_0xa595x3).style.display = "block";
+    var _0xa595x4, _0xa595x5 = document.getElementsByClassName("tabmenu");
+    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5.length; _0xa595x4++) {
+        _0xa595x5[_0xa595x4].className = "tabmenu"
     };
-    document[_0x4efb[6]](_0xa595x2)[_0x4efb[9]] = _0x4efb[10]
+    document.getElementById(_0xa595x2).className = "tabmenu active"
 }
 
 function hapus2() {
-    var _0xa595x3 = document[_0x4efb[6]](_0x4efb[12])[_0x4efb[11]];
-    localStorage[_0x4efb[14]](_0x4efb[13], _0xa595x3)
+    var _0xa595x3 = document.getElementById("checkout-box").innerHTML;
+    localStorage.setItem("ck", _0xa595x3)
 }
-
-var url_string = window['location']['href'],
+var url_string = window.location.href,
     urlParameter = new URL(url_string),
-    labelMode = urlParameter[_0x4efb[19]][_0x4efb[18]](_0x4efb[17]);
-_0x4efb[20] == labelMode && (document[_0x4efb[22]](_0x4efb[21]), window[_0x4efb[23]] = function () {
-    $(_0x4efb[28])[_0x4efb[27]](function () {
-        $(this)[_0x4efb[26]](_0x4efb[24], _0x4efb[25])
+    labelMode = urlParameter.searchParams.get("mode");
+"related-posts" == labelMode && (document.write("<style>#blog-pager,.navmobile,#header-material,#menu-blanter,.breadcrumbs,#popular-box,.footer-blanter,#footer-material,#footer-bottom,.navwa,.flashlight,.blanternotif,a.blantershow-chat{display:none!important}body:before{background:#fff}.post-outer{margin:0 3px 10px}#outer-material{margin:0}#content-material{padding:0 5px;width:auto!important;max-width:100%!important}*{overflow-y:hidden!important}body{padding-top:0!important;background:transparent!important;overflow-y:hidden!important}.post-thumbnail img{height:150px}</style>"), window.onload = function () {
+    $(".post.hentry a").each(function () {
+        $(this).attr("target", "_top")
     })
 });
+
 function getDocHeight(_0xa595x3) {
     _0xa595x3 = _0xa595x3 || document;
-    var _0xa595x4 = _0xa595x3[_0x4efb[29]],
-        _0xa595xb = _0xa595x3[_0x4efb[30]],
-        _0xa595xc = Math[_0x4efb[34]](_0xa595x4[_0x4efb[31]], _0xa595x4[_0x4efb[32]], _0xa595xb[_0x4efb[33]], _0xa595xb[_0x4efb[31]], _0xa595xb[_0x4efb[32]]);
+    var _0xa595x4 = _0xa595x3.body,
+        _0xa595xb = _0xa595x3.documentElement,
+        _0xa595xc = Math.max(_0xa595x4.scrollHeight, _0xa595x4.offsetHeight, _0xa595xb.clientHeight, _0xa595xb.scrollHeight, _0xa595xb.offsetHeight);
     return _0xa595xc
 }
-function setIframeHeight(_0xa595x3) {
-    var _0xa595x4 = document[_0x4efb[6]](_0xa595x3),
-        _0xa595xb = _0xa595x4[_0x4efb[35]] ? _0xa595x4[_0x4efb[35]] : _0xa595x4[contentWindow]['document'];
-    _0xa595x4[_0x4efb[4]]['visibility'] = _0x4efb[39], _0xa595x4[_0x4efb[4]][_0x4efb[40]] = _0x4efb[41], _0xa595x4[_0x4efb[4]][_0x4efb[40]] = getDocHeight(_0xa595xb) + 4 + _0x4efb[42], _0xa595x4[_0x4efb[4]]['visibility'] = visible
-}
 
-$(document)[_0x4efb[46]](function () {
-    $(window)[_0x4efb[45]](function () {
-        setIframeHeight(_0x4efb[44])
+function setIframeHeight(_0xa595x3) {
+    var _0xa595x4 = document.getElementById(_0xa595x3),
+        _0xa595xb = _0xa595x4.contentDocument ? _0xa595x4.contentDocument : _0xa595x4.contentWindow.document;
+    _0xa595x4.style.visibility = "hidden", _0xa595x4.style.height = "0px", _0xa595x4.style.height = getDocHeight(_0xa595xb) + 4 + ".42px", _0xa595x4.style.visibility = "visible"
+}
+$(document).ready(function () {
+    $(window).resize(function () {
+        setIframeHeight("relatedframe-posts")
     })
-}), $(_0x4efb[49])[_0x4efb[48]](_0x4efb[47], function () {
-    setIframeHeight(_0x4efb[44])
+}), $("#relatedframe-posts").bind("load", function () {
+    setIframeHeight("relatedframe-posts")
 })
+
