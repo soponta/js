@@ -1,13 +1,10 @@
 document['getElementById']('checkout-box')['innerHTML'] = localStorage['getItem']('ck'), null === localStorage['getItem']('sub2') ? $('#sub-total b')['text']('Rp. 0') : $('#sub-total b')['text'](localStorage['getItem']('sub2'));
 var select1 = $('#pilihan-1 option[value="default"]')['text'](),
     select2 = $('#pilihan-2 option[value="default"]')['text']();
+function angkaToRp(b){var a="";var d=b.toString().split("").reverse().join("");for(var c=0;c<d.length;c++){if(c%3==0){a+=d.substr(c,3)+"."}}
+                      return"Rp. "+a.split("",a.length-1).reverse().join("")}
+function rpToAngka(a){return parseInt(a.replace(/[^0-9]/g,""),10)};
 
-function angkaToRp(_0x13ffx4) {
-    for (var _0x13ffx5 = '', _0x13ffx6 = _0x13ffx4.toString()['split']('')['reverse']()['join'](''), _0x13ffx7 = 0; _0x13ffx7 < _0x13ffx6['length']; _0x13ffx7++) {
-        0 == _0x13ffx7 % 3 && (_0x13ffx5 += _0x13ffx6['substr'](_0x13ffx7, 3) + '.')
-    };
-    return 'Rp. ' + _0x13ffx5['split']('', _0x13ffx5['length'] - 1)['reverse']()['join']('')
-}
 var walink = 'https://web.whatsapp.com/send',
     phone = text_phone,
     walink2 = '&text=' + text_wa,
@@ -526,22 +523,28 @@ function _0x56f485() {
     });
 } - 0x1 == navigator[_0xf82fbc[0xbd]][_0xf82fbc[0x74]](_0xf82fbc[0xbc]) && (window[_0xf82fbc[0x1e]] ? window[_0xf82fbc[0x1e]](_0xf82fbc[0x2a], _0x4bf798, !0x1) : window[_0xf82fbc[0x20]] ? window[_0xf82fbc[0x20]](_0xf82fbc[0xa5], _0x4bf798) : window[_0xf82fbc[0xa5]] = _0x4bf798);
 
-function rudrSwitchTab(_0xa595x2, _0xa595x3) {
-    var _0xa595x4, _0xa595x5 = document.getElementsByClassName("tabcontent");
-    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5.length; _0xa595x4++) {
-        _0xa595x5[_0xa595x4].style.display = "none"
-    };
-    document.getElementById(_0xa595x3).style.display = "block";
-    var _0xa595x4, _0xa595x5 = document.getElementsByClassName("tabmenu");
-    for (_0xa595x4 = 0; _0xa595x4 < _0xa595x5.length; _0xa595x4++) {
-        _0xa595x5[_0xa595x4].className = "tabmenu"
-    };
-    document.getElementById(_0xa595x2).className = "tabmenu active"
+function rudrSwitchTab(rudr_tab_id, rudr_tab_content) {
+// first of all we get all tab content blocks
+    var x = document.getElementsByClassName("tabcontent");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = 'none'; // hide all tab content
+    }
+    document.getElementById(rudr_tab_content).style.display = 'block'; // display the content of the tab we need
+
+    // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+    var x = document.getElementsByClassName("tabmenu");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].className = 'tabmenu'; 
+    }
+    document.getElementById(rudr_tab_id).className = 'tabmenu active';
 }
+function commentToggle(selectTab) {$(".comments-tab").addClass("inactive-select-tab");$(selectTab).removeClass("inactive-select-tab");$(".comments-page").hide();$(selectTab + "-page").show();}
 
 function hapus2() {
-    var _0xa595x3 = document.getElementById("checkout-box").innerHTML;
-    localStorage.setItem("ck", _0xa595x3)
+    var ifrm = document.getElementById("checkout-box").innerHTML;
+    localStorage.setItem("ck", ifrm)
 }
 var url_string = window.location.href,
     urlParameter = new URL(url_string),
@@ -552,20 +555,24 @@ var url_string = window.location.href,
     })
 });
 
-function getDocHeight(_0xa595x3) {
-    _0xa595x3 = _0xa595x3 || document;
-    var _0xa595x4 = _0xa595x3.body,
-        _0xa595xb = _0xa595x3.documentElement,
-        _0xa595xc = Math.max(_0xa595x4.scrollHeight, _0xa595x4.offsetHeight, _0xa595xb.clientHeight, _0xa595xb.scrollHeight, _0xa595xb.offsetHeight);
-    return _0xa595xc
-}
+function getDocHeight(doc) {
+    doc = doc || document;
+  // stackoverflow.com/questions/1145850/
+    var body = doc.body, html = doc.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        return height;
+          }
 
-function setIframeHeight(_0xa595x3) {
-    var _0xa595x4 = document.getElementById(_0xa595x3),
-        _0xa595xb = _0xa595x4.contentDocument ? _0xa595x4.contentDocument : _0xa595x4.contentWindow.document;
-    _0xa595x4.style.visibility = "hidden", _0xa595x4.style.height = "0px", _0xa595x4.style.height = getDocHeight(_0xa595xb) + 4 + ".42px", _0xa595x4.style.visibility = "visible"
-}
-$(document).ready(function () {
+$(documefunction setIframeHeight(id) {
+    var ifrm = document.getElementById(id);
+    var doc = ifrm.contentDocument? ifrm.contentDocument: 
+        ifrm.contentWindow.document;
+        ifrm.style.visibility = 'hidden';
+        ifrm.style.height = "0px"; // reset to minimal height ...
+  // IE opt. for bing/msn needs a bit added or scrollbar appears
+        ifrm.style.height = getDocHeight( doc ) + 4 + ".42px";
+        ifrm.style.visibility = 'visible';
+      } nt).ready(function () {
     $(window).resize(function () {
         setIframeHeight("relatedframe-posts")
     })
