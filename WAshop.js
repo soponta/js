@@ -7,16 +7,18 @@ if (localStorage.getItem("sub2") === null) {
 var select1 = $('#pilihan-1 option\[value="default"\]').text(),
     select2 = $('#pilihan-2 option\[value="default"\]').text();
 
-function angkaToRp(_0x12b8x4) {
-    var _0x12b8x5 = "";
-    var _0x12b8x6 = _0x12b8x4.toString().split("").reverse().join("");
-    for (var _0x12b8x7 = 0; _0x12b8x7 < _0x12b8x6.length; _0x12b8x7++) {
-        if (_0x12b8x7 % 3 == 0) {
-            _0x12b8x5 += _0x12b8x6.substr(_0x12b8x7, 3) + "\."
-        }
-    };
-    return "Rp\. " + _0x12b8x5.split("", _0x12b8x5.length - 1).reverse().join("")
+function angkaToRp(b){
+    var a="";
+    var d=b.toString().split("").reverse().join("");
+    for(var c=0;c<d.length;c++){
+        if(c%3==0){a+=d.substr(c,3)+"\."
+                  }
+         }
+           return "Rp\. "+a.split("",a.length - 1).reverse().join("")
 }
+function rpToAngka(a){return parseInt(a.replace(/[^0-9]/g,""),10)
+    };
+
 var walink = "https://web\.whatsapp\.com/send",
     phone = text_phone,
     walink2 = "&text=" + text_wa;
@@ -34,21 +36,21 @@ $(document).on("click", "\.captchaid", function () {
     var _0x12b8x10 = document.getElementById("alamat");
     if ("" != _0x12b8x10.value) {
         var _0x12b8x11 = $("\.harga-s b").text();
-        var _0x12b8x12 = $("#title").text(),
-            _0x12b8x13 = document.getElementById("jumlah"),
-            _0x12b8x14 = _0x12b8x13.defaultValue,
-            _0x12b8x15 = _0x12b8x13.value,
-            _0x12b8x16 = $("#pilihan-1 :selected").text(),
-            _0x12b8x17 = $("#pilihan-2 :selected").text(),
-            _0x12b8x18 = document.getElementById("product-desc").value;
-        var _0x12b8x19 = document.getElementById("nama").value,
-            _0x12b8x1a = document.getElementById("telepon").value,
-            _0x12b8x1b = $("#pembayaran :selected").text(),
-            _0x12b8x1c = document.getElementById("alamat").value,
-            _0x12b8x1d = document.getElementById("kota").value,
-            _0x12b8x1e = document.getElementById("kodepos").value,
+        var title = $("#title").text(),
+            wa_jumlah = document.getElementById("jumlah"),
+            _0x12b8x14 = wa_jumlah.defaultValue,
+            _0x12b8x15 = wa_jumlah.value,
+            select1 = $("#pilihan-1 :selected").text(),
+            select2 = $("#pilihan-2 :selected").text(),
+            wa_catatan = document.getElementById("product-desc").value;
+        var wa_nama = document.getElementById("nama").value,
+            phone = document.getElementById("telepon").value,
+            wa_metode = $("#pembayaran :selected").text(),
+            wa_alamat = document.getElementById("alamat").value,
+            wa_kota = document.getElementById("kota").value,
+            wa_kodepos = document.getElementById("kodepos").value,
             _0x12b8x1f = window.location.href;
-        var _0x12b8x20 = walink + "\?phone=" + phone + walink2 + "\*" + _0x12b8x12 + "\*%0A%0A" + "\*" + wa_jumlah + "\* : " + _0x12b8x15 + "%0A" + "\*" + select1 + "\* : " + _0x12b8x16 + "%0A" + "\*" + select2 + "\* : " + _0x12b8x17 + "%0A" + "\*" + text_subtotal + "\* : " + _0x12b8x11 + "%0A" + "=============== %0A" + "\*" + wa_nama + "\* : " + _0x12b8x19 + " \(" + _0x12b8x1a + "\) %0A" + "\*" + wa_metode + "\* : " + _0x12b8x1b + "%0A" + "=============== %0A" + "\*" + wa_alamat + "\* : " + _0x12b8x1c + ", " + _0x12b8x1d + ", " + _0x12b8x1e + "%0A" + "\*" + wa_catatan + "\* : " + _0x12b8x18 + "%0A%0A" + wa_last + " : " + _0x12b8x1f;
+        var _0x12b8x20 = walink + "\?phone=" + phone + walink2 + "\*" + title + "\*%0A%0A" + "\*" + wa_jumlah + "\* : " + _0x12b8x15 + "%0A" + "\*" + select1 + "\* : " + _0x12b8x16 + "%0A" + "\*" + select2 + "\* : " + _0x12b8x17 + "%0A" + "\*" + text_subtotal + "\* : " + _0x12b8x11 + "%0A" + "=============== %0A" + "\*" + wa_nama + "\* : " + _0x12b8x19 + " \(" + _0x12b8x1a + "\) %0A" + "\*" + wa_metode + "\* : " + _0x12b8x1b + "%0A" + "=============== %0A" + "\*" + wa_alamat + "\* : " + _0x12b8x1c + ", " + _0x12b8x1d + ", " + _0x12b8x1e + "%0A" + "\*" + wa_catatan + "\* : " + _0x12b8x18 + "%0A%0A" + wa_last + " : " + _0x12b8x1f;
         var _0x12b8x21 = maillink + email + maillink1 + mailsubject + _0x12b8x12 + maillink2 + "\*" + _0x12b8x12 + "\*%0A%0A" + "\*" + wa_jumlah + "\* : " + _0x12b8x15 + "%0A" + "\*" + select1 + "\* : " + _0x12b8x16 + "%0A" + "\*" + select2 + "\* : " + _0x12b8x17 + "%0A" + "\*" + text_subtotal + "\* : " + _0x12b8x11 + "%0A" + "=============== %0A" + "\*" + wa_nama + "\* : " + _0x12b8x19 + " \(" + _0x12b8x1a + "\) %0A" + "\*" + wa_metode + "\* : " + _0x12b8x1b + "%0A" + "=============== %0A" + "\*" + wa_alamat + "\* : " + _0x12b8x1c + ", " + _0x12b8x1d + ", " + _0x12b8x1e + "%0A" + "\*" + wa_catatan + "\* : " + _0x12b8x18 + "%0A%0A" + wa_last + " : " + _0x12b8x1f;
         document.getElementById("walink").href = _0x12b8x20;
         document.getElementById("emaillink").href = _0x12b8x21;
@@ -58,7 +60,7 @@ $(document).on("click", "\.captchaid", function () {
     }
 });
 $(document).on("click", "#next_order", function () {
-    var _0x12b8x13 = document.getElementById("jumlah"),
+    var wa_jumlah = document.getElementById("jumlah"),
         _0x12b8x14 = _0x12b8x13.defaultValue,
         _0x12b8x15 = _0x12b8x13.value,
         _0x12b8x16 = $("#pilihan-1 :selected").text(),
@@ -614,56 +616,62 @@ function _0x5bb307() {
 } - 0x1 == navigator[_0x2b3d89[0xbe]][_0x2b3d89[0x74]](_0x2b3d89[0xbd]) && (window[_0x2b3d89[0x27]] ? window[_0x2b3d89[0x27]](_0x2b3d89[0x2a], _0x5bb307, !0x1) : window[_0x2b3d89[0x29]] ? window[_0x2b3d89[0x29]](_0x2b3d89[0xa6], _0x5bb307) : window[_0x2b3d89[0xa6]] = _0x5bb307);
 var _0x4a98 = ["tabcontent", "getElementsByClassName", "length", "display", "style", "none", "getElementById", "block", "tabmenu", "className", "tabmenu active", "innerHTML", "checkout-box", "ck", "setItem", "href", "location", "mode", "get", "searchParams", "related-posts", "<style>#blog-pager,.navmobile,#header-material,#menu-blanter,.breadcrumbs,#popular-box,.footer-blanter,#footer-material,#footer-bottom,.navwa,.flashlight,.blanternotif,a.blantershow-chat{display:none!important}body:before{background:#fff}.post-outer{margin:0 3px 10px}#outer-material{margin:0}#content-material{padding:0 5px;width:auto!important;max-width:100%!important}*{overflow-y:hidden!important}body{padding-top:0!important;background:transparent!important;overflow-y:hidden!important}.post-thumbnail img{height:150px}</style>", "write", "onload", "target", "_top", "attr", "each", ".post.hentry a", "body", "documentElement", "scrollHeight", "offsetHeight", "clientHeight", "max", "contentDocument", "document", "contentWindow", "visibility", "hidden", "height", "0px", ".42px", "visible", "relatedframe-posts", "resize", "ready", "load", "bind", "#relatedframe-posts"];
 
-function rudrSwitchTab(_0x2eefx2, _0x2eefx3) {
-    var _0x2eefx4, _0x2eefx5 = document[_0x4a98[1]](_0x4a98[0]);
-    for (_0x2eefx4 = 0; _0x2eefx4 < _0x2eefx5[_0x4a98[2]]; _0x2eefx4++) {
-        _0x2eefx5[_0x2eefx4][_0x4a98[4]][_0x4a98[3]] = _0x4a98[5]
-    };
-    document[_0x4a98[6]](_0x2eefx3)[_0x4a98[4]][_0x4a98[3]] = _0x4a98[7];
-    var _0x2eefx4, _0x2eefx5 = document[_0x4a98[1]](_0x4a98[8]);
-    for (_0x2eefx4 = 0; _0x2eefx4 < _0x2eefx5[_0x4a98[2]]; _0x2eefx4++) {
-        _0x2eefx5[_0x2eefx4][_0x4a98[9]] = _0x4a98[8]
-    };
-    document[_0x4a98[6]](_0x2eefx2)[_0x4a98[9]] = _0x4a98[10]
+function rudrSwitchTab(rudr_tab_id, rudr_tab_content) {
+// first of all we get all tab content blocks
+    var x = document.getElementsByClassName("tabcontent");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].style.display = 'none'; // hide all tab content
+    }
+    document.getElementById(rudr_tab_content).style.display = 'block'; // display the content of the tab we need
+
+    // now we get all tab menu items by class names (use the next code only if you need to highlight current tab)
+    var x = document.getElementsByClassName("tabmenu");
+    var i;
+    for (i = 0; i < x.length; i++) {
+        x[i].className = 'tabmenu'; 
+    }
+    document.getElementById(rudr_tab_id).className = 'tabmenu active';
 }
+function commentToggle(selectTab) {$(".comments-tab").addClass("inactive-select-tab");$(selectTab).removeClass("inactive-select-tab");$(".comments-page").hide();$(selectTab + "-page").show();
+ }
 
 function hapus2() {
-    var _0x2eefx7 = document[_0x4a98[6]](_0x4a98[12])[_0x4a98[11]];
-    localStorage[_0x4a98[14]](_0x4a98[13], _0x2eefx7)
-}
-var url_string = window[_0x4a98[16]][_0x4a98[15]];
-var urlParameter = new URL(url_string);
-var labelMode = urlParameter[_0x4a98[19]][_0x4a98[18]](_0x4a98[17]);
-if (labelMode == _0x4a98[20]) {
-    document[_0x4a98[22]](_0x4a98[21]);
-    window[_0x4a98[23]] = function () {
-        $(_0x4a98[28])[_0x4a98[27]](function () {
-            $(this)[_0x4a98[26]](_0x4a98[24], _0x4a98[25])
-        })
-    }
-};
-
-function getDocHeight(_0x2eefxc) {
-    _0x2eefxc = _0x2eefxc || document;
-    var _0x2eefxd = _0x2eefxc[_0x4a98[29]],
-        _0x2eefxe = _0x2eefxc[_0x4a98[30]];
-    var _0x2eefxf = Math[_0x4a98[34]](_0x2eefxd[_0x4a98[31]], _0x2eefxd[_0x4a98[32]], _0x2eefxe[_0x4a98[33]], _0x2eefxe[_0x4a98[31]], _0x2eefxe[_0x4a98[32]]);
-    return _0x2eefxf
+    var ifrm = document.getElementById("checkout-box").innerHTML;
+    localStorage.setItem("ck", ifrm)
 }
 
-function setIframeHeight(_0x2eefx11) {
-    var _0x2eefx12 = document[_0x4a98[6]](_0x2eefx11);
-    var _0x2eefxc = _0x2eefx12[_0x4a98[35]] ? _0x2eefx12[_0x4a98[35]] : _0x2eefx12[_0x4a98[37]][_0x4a98[36]];
-    _0x2eefx12[_0x4a98[4]][_0x4a98[38]] = _0x4a98[39];
-    _0x2eefx12[_0x4a98[4]][_0x4a98[40]] = _0x4a98[41];
-    _0x2eefx12[_0x4a98[4]][_0x4a98[40]] = getDocHeight(_0x2eefxc) + 4 + _0x4a98[42];
-    _0x2eefx12[_0x4a98[4]][_0x4a98[38]] = _0x4a98[43]
-}
-$(document)[_0x4a98[46]](function () {
-    $(window)[_0x4a98[45]](function () {
-        setIframeHeight(_0x4a98[44])
+var url_string = window.location.href,
+    urlParameter = new URL(url_string),
+    labelMode = urlParameter.searchParams.get("mode");
+"related-posts" == labelMode && (document.write("<style>#blog-pager,.navmobile,#header-material,#menu-blanter,.breadcrumbs,#popular-box,.footer-blanter,#footer-material,#footer-bottom,.navwa,.flashlight,.blanternotif,a.blantershow-chat{display:none!important}body:before{background:#fff}.post-outer{margin:0 3px 10px}#outer-material{margin:0}#content-material{padding:0 5px;width:auto!important;max-width:100%!important}*{overflow-y:hidden!important}body{padding-top:0!important;background:transparent!important;overflow-y:hidden!important}.post-thumbnail img{height:150px}</style>"), 
+                                 window.onload = function () {
+    $(".post.hentry a").each(function () {
+        $(this).attr("target", "_top")
     })
 });
-$(_0x4a98[49])[_0x4a98[48]](_0x4a98[47], function () {
-    setIframeHeight(_0x4a98[44])
+
+function getDocHeight(doc) {
+    doc = doc || document;
+  // stackoverflow.com/questions/1145850/
+    var body = doc.body, html = doc.documentElement;
+    var height = Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight );
+        return height;
+          }
+
+$(documefunction setIframeHeight(id) {
+    var ifrm = document.getElementById(id);
+    var doc = ifrm.contentDocument? ifrm.contentDocument: 
+        ifrm.contentWindow.document;
+        ifrm.style.visibility = 'hidden';
+        ifrm.style.height = "0px"; // reset to minimal height ...
+  // IE opt. for bing/msn needs a bit added or scrollbar appears
+        ifrm.style.height = getDocHeight( doc ) + 4 + ".42px";
+        ifrm.style.visibility = 'visible';
+      } nt).ready(function () {
+    $(window).resize(function () {
+        setIframeHeight("relatedframe-posts")
+    })
+}), $("#relatedframe-posts").bind("load", function () {
+    setIframeHeight("relatedframe-posts")
 })
