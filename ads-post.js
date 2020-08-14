@@ -15,7 +15,7 @@ if (ad==2) {
 txt="DOMAIN MURAH BANGEET!";
 url="https://panel.niagahoster.co.id/ref/27488";
 alt="DOMAIN MURAH BANGEET!";
-banner="<a href="https://panel.niagahoster.co.id/banners/Set3-niagahoster-728x90.png";
+banner="https://panel.niagahoster.co.id/banners/Set3-niagahoster-728x90.png";
 width="100%";
 height="100%";
 }
@@ -28,10 +28,10 @@ width="100%";
 height="100%";
 }
 if (ad==3) {
-txt="Komisi 100 Persen";
+txt="Domain Murah";
 url="https://www.domainesia.com/?aff=12391";
-alt="Komisi 100 Persen";
-banner="https://static.domainesia.com/assets/images/afiliasi/banner-1.png"></a>";
+alt="Domain Murah";
+banner="https://static.domainesia.com/assets/images/afiliasi/banner-1.png";
 width="100%";
 height="100%";
 }
