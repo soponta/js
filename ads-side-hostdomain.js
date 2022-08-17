@@ -15,7 +15,7 @@ if (ad==2) {
 txt="BUAT WEBSITE INSTAN MURAH BANGEET!";
 url="https://panel.niagahoster.co.id/ref/27488";
 alt="WEBSITE INSTAN MURAH BANGEET!";
-banner="https://niagaspace.sgp1.cdn.digitaloceanspaces.com/assets/images/affiliasi/banner/banner-banner-1645609226-728x90-1-.png";
+banner="https://niagaspace.sgp1.cdn.digitaloceanspaces.com/assets/images/affiliasi/banner/banner-banner-1645609233-300x250-1-.png";
 width="100%";
 height="100%";
 }
@@ -28,9 +28,9 @@ width="100%";
 height="100%";
 }
 if (ad==4) {
-txt="DOMAIN MURAH";
+txt="BELI HOSTING GRATIS DOMAIN..!";
 url="https://www.domainesia.com/?aff=12391";
-alt="DOMAIN MURAH";
+alt="DOMAIN GRATIS";
 banner="https://static.domainesia.com/assets/images/afiliasi/banner-4a.png";
 width="100%";
 height="100%";
